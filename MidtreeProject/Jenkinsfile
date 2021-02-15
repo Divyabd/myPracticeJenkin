@@ -1,3 +1,4 @@
+
 pipeline{
   agent 
   {
@@ -9,6 +10,7 @@ pipeline{
 
   stages {
     stage('MavenVertion'){
+      sh 'BUILD_NUMBER'
       steps{
         echo 'Maven Vaersion'
         sh 'mvn -version'
